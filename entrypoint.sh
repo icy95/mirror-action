@@ -70,6 +70,7 @@ else
         echo "FATAL: You must upgrade to using actions inputs instead of args: to push a single branch" > /dev/stderr
         exit 1
     else
+				eval git config --global push.default current
         eval git push -u ${GIT_PUSH_ARGS} mirror
     fi
 fi

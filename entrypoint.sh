@@ -50,3 +50,4 @@ fi
 git remote add mirror "${REMOTE}"
 git config --global push.default current
 git push ${GIT_PUSH_ARGS} mirror
+git push --tags --force mirror

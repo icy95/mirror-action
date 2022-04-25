@@ -5,6 +5,8 @@ if [[ "${DEBUG}" -eq "true" ]]; then
     set -x
 fi
 
+git config --global --add safe.directory /github/workspace
+
 GIT_USERNAME=${INPUT_GIT_USERNAME:-${GIT_USERNAME:-"git"}}
 REMOTE=${INPUT_REMOTE:-"$*"}
 GIT_SSH_PRIVATE_KEY=${INPUT_GIT_SSH_PRIVATE_KEY}
